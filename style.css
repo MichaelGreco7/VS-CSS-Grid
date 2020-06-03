@@ -8,21 +8,26 @@
   color: #28190e;
 }
 
+/* ! Parent Layout */
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   height: 100vh;
 }
 
+/* ! Child Layout */
+
 .grid-container div {
   border: 10px solid #cbd4c2;
   border-radius: 20px;
   width: 100%;
-  /* height: 20vh; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+/* ! Step 1 */
 
 .header {
   background-color: #acf39d;
@@ -54,6 +59,9 @@
   grid-row: 3 / 3;
 }
 
+/*  ? min max */
+/* ! Step 2 */
+
 @media only screen and (max-width: 1500px) {
   .header {
     background-color: #acf39d;
@@ -82,6 +90,108 @@
   .footer {
     background-color: #e3b5a4;
     grid-column: 4 / 5;
+    grid-row: 3 / 4;
+  }
+}
+
+/*  ? min max */
+/* ! Step 3 Mobile First */
+@media only screen and (min-width: 750px) {
+  .header {
+    background-color: #acf39d;
+    grid-column: 1 / 5;
+    grid-row: 1 / 6;
+  }
+
+  .sidebar {
+    background-color: #e85f5c;
+    grid-column: 1 / 5;
+    grid-row: 2 / 6;
+  }
+
+  .content {
+    background-color: #9cfffa;
+    grid-column: 1 / 5;
+    grid-row: 3 / 6;
+  }
+
+  .sidebar2 {
+    background-color: #773344;
+    grid-column: 1 / 5;
+    grid-row: 4 / 6;
+  }
+
+  .footer {
+    background-color: #e3b5a4;
+    grid-column: 1 / 5;
+    grid-row: 5 / 6;
+  }
+}
+
+/*  ? min max */
+/* ! Step 4 Tablet Large */
+@media only screen and (min-width: 800px) {
+  .header {
+    background-color: #acf39d;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .sidebar {
+    background-color: #e85f5c;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .content {
+    background-color: #9cfffa;
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+  }
+
+  .sidebar2 {
+    background-color: #773344;
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+  }
+
+  .footer {
+    background-color: #e3b5a4;
+    grid-column: 1 / 5;
+    grid-row: 4 / 5;
+  }
+}
+
+/*  ? min max */
+/* ! Step 4 Desktop Large */
+@media only screen and (min-width: 1240px) {
+  .header {
+    background-color: #acf39d;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .sidebar {
+    background-color: #e85f5c;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .content {
+    background-color: #9cfffa;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .sidebar2 {
+    background-color: #773344;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+
+  .footer {
+    background-color: #e3b5a4;
+    grid-column: 1 / 5;
     grid-row: 3 / 4;
   }
 }
